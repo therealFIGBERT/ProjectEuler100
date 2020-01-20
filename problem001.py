@@ -5,9 +5,7 @@
 # dateCompleted = "20/01/2020"
 
 def multOfThreeOrFive(num):
-    if num % 3 is 0 or num % 5 is 0:
-        return True
-    return False
+    return num % 3 is 0 or num % 5 is 0
 
 def sumOfMultiplesOfThreeOrFive(num):
     lstOfMults = []

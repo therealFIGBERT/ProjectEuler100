@@ -12,8 +12,7 @@ def sieveOfEratosthenes(limit):
             for i in range(p * 2, limit+ 1, p): 
                 prime[i] = False
         p += 1
-    prime[0]= False
-    prime[1]= False
+    prime[0:2] = [False, False]
     return [p for p in range(limit + 1) if prime[p]]
 
 def search():

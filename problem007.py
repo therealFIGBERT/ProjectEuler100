@@ -9,7 +9,7 @@ def sieveOfEratosthenes(limit):
     p = 2
     while (p * p <= limit): 
         if (prime[p] == True): 
-            for i in range(p * 2, limit+ 1, p): 
+            for i in range(p * 2, limit + 1, p): 
                 prime[i] = False
         p += 1
     prime[0:2] = [False, False]

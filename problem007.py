@@ -19,10 +19,10 @@ def sieveOfEratosthenes(limit):
     return [p for p in range(limit + 1) if prime[p]]
 
 def search():
-    searchRange = 100
+    searchRange = 1000
     returnValue = sieveOfEratosthenes(searchRange)
     while len(returnValue) < 10001:
-        searchRange += 100
+        searchRange += 1000
         returnValue = sieveOfEratosthenes(searchRange)
     print(returnValue[10000])
 

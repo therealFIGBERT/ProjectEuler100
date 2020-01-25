@@ -24,6 +24,6 @@ def search():
     while len(returnValue) < 10001:
         searchRange += 1000
         returnValue = sieveOfEratosthenes(searchRange)
-    print(returnValue[10000])
+    print("The 10,001st prime number is %s" % returnValue[10000])
 
 search()

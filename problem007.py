@@ -3,8 +3,6 @@
 # solutionBy = "FIGBERT"
 # language = "Python"
 # dateCompleted = "24/01/2020"
-# https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
-import math
 
 def sieveOfEratosthenes(limit):
     prime = [True for _ in range(limit+1)]

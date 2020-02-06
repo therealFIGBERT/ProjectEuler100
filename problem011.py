@@ -2,7 +2,7 @@
 # problemNum = 11
 # solutionBy = "FIGBERT"
 # language = "Python"
-# dateCompleted = "32/01/2020"
+# dateCompleted = "01/02/2020"
 
 VAL = []
 STRVAL = """

@@ -1,4 +1,4 @@
-# problemName = "Highly divisible triangular number"
+# problemName = "Large sum"
 # problemNum = 13
 # solutionBy = "FIGBERT"
 # language = "Python"

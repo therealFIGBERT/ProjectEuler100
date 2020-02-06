@@ -5,7 +5,6 @@
 # dateCompleted = "05/02/2020"
 from functools import reduce
 from math import sqrt
-import time
 
 def moreThanFiveHundredFactors(num):
     factors = len(list(reduce(list.__add__, ([i, num//i] for i in range(1, int(sqrt(num)) + 1) if num % i == 0))))

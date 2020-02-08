@@ -15,9 +15,10 @@ def sieveOfEratosthenes(limit):
     prime[0:2] = [False, False]
     return [p for p in range(limit + 1) if prime[p]]
 
-searchRange = 1000
-returnValue = sieveOfEratosthenes(searchRange)
-while len(returnValue) < 10001:
-    searchRange += 1000
+if __name__ == "__main__":
+    searchRange = 1000
     returnValue = sieveOfEratosthenes(searchRange)
-print("The 10,001st prime number is %s" % returnValue[10000])
+    while len(returnValue) < 10001:
+        searchRange += 1000
+        returnValue = sieveOfEratosthenes(searchRange)
+    print("The 10,001st prime number is %s" % returnValue[10000])

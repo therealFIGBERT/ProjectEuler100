@@ -16,8 +16,9 @@ def triangle(pos):
         val += i
     return moreThanFiveHundredFactors(val)
 
-answer = 2
-while not triangle(answer):
-    answer += 1
-answer = triangle(answer)
-print(f"The value of the first triangle number to have over five hundred divisors is {answer}")
+if __name__ == "__main__":
+    answer = 2
+    while not triangle(answer):
+        answer += 1
+    answer = triangle(answer)
+    print(f"The value of the first triangle number to have over five hundred divisors is {answer}")

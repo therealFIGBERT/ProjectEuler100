@@ -17,9 +17,10 @@ def sumOfEvensInList(srcList):
             lst.append(i)
     return sum(lst)
 
-fibUntil4Mil = fib(4000000)
-answer = sumOfEvensInList(fibUntil4Mil)
-print((
-    "By considering the terms in the Fibonacci sequence whose values do not "
-    "exceed four million, the sum of the even-valued terms is {}".format(answer)
-))
+if __name__ == "__main__":
+    fibUntil4Mil = fib(4000000)
+    answer = sumOfEvensInList(fibUntil4Mil)
+    print((
+        "By considering the terms in the Fibonacci sequence whose values do not "
+        "exceed four million, the sum of the even-valued terms is {}".format(answer)
+    ))

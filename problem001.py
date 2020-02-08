@@ -16,5 +16,6 @@ def sumOfMultiplesOfThreeOrFive(num):
         numStep -= 1
     return sum(lstOfMults)
 
-answer = sumOfMultiplesOfThreeOrFive(1000)
-print("The sum of all the multiples of 3 or 5 below 1000 is %s" % answer)
+if __name__ == "__main__":
+    answer = sumOfMultiplesOfThreeOrFive(1000)
+    print("The sum of all the multiples of 3 or 5 below 1000 is %s" % answer)

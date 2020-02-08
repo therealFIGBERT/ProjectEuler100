@@ -23,5 +23,6 @@ def primeFactors(num):
     
     return primes
 
-answer = max(primeFactors(600851475143))
-print("The largest prime factor of the number 600851475143 is %s" % answer)
+if __name__ == "__main__":
+    answer = max(primeFactors(600851475143))
+    print("The largest prime factor of the number 600851475143 is %s" % answer)

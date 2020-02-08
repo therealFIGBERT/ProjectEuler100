@@ -15,5 +15,6 @@ def sieveOfEratosthenes(limit):
     prime[0:2] = [False, False]
     return [p for p in range(limit + 1) if prime[p]]
 
-primes = sieveOfEratosthenes(2000000)
-print(f"The sum of all the primes below two million is {sum(primes)}")
+if __name__ == "__main__":
+    primes = sieveOfEratosthenes(2000000)
+    print(f"The sum of all the primes below two million is {sum(primes)}")

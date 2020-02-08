@@ -80,8 +80,9 @@ def largestDiagonal(lst):
                     largest = downRight if downRight > largest else largest
     return largest
 
-diagonal = largestDiagonal(VAL)
-horizontal = largestHorizontal(VAL)
-vertical = largestVertical(VAL)
-answer = max([diagonal, horizontal, vertical])
-print(f"The greatest product of four adjacent numbers in the same direction in the 20×20 grid is {answer}")
+if __name__ == "__main__":
+    diagonal = largestDiagonal(VAL)
+    horizontal = largestHorizontal(VAL)
+    vertical = largestVertical(VAL)
+    answer = max([diagonal, horizontal, vertical])
+    print(f"The greatest product of four adjacent numbers in the same direction in the 20×20 grid is {answer}")

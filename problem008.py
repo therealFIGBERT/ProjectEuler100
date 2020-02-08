@@ -20,5 +20,6 @@ def findLargestProduct(num):
         end += 1
     return largestProduct
 
-answer = findLargestProduct(VAL)
-print(f"The value of the greatest product of thirteen adjacent digits in the provided 1000-digit number is {answer}")
+if __name__ == "__main__":
+    answer = findLargestProduct(VAL)
+    print(f"The value of the greatest product of thirteen adjacent digits in the provided 1000-digit number is {answer}")

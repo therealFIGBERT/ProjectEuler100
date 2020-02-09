@@ -112,4 +112,7 @@ for line in STRVAL.splitlines():
 
 if __name__ == "__main__":
     answer = str(sum(VAL))[0:10]
-    print(f"The first ten digits of the sum of the provided one-hundred 50-digit numbers are {answer}")
+    print((
+        "The first ten digits of the sum of the provided "
+        f"one-hundred 50-digit numbers are {answer}"
+    ))

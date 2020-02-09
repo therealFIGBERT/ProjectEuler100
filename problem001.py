@@ -4,18 +4,18 @@
 # language = "Python"
 # dateCompleted = "20/01/2020"
 
-def multOfThreeOrFive(num):
+def mult_of_three_or_five(num):
     return num % 3 == 0 or num % 5 == 0
 
-def sumOfMultiplesOfThreeOrFive(num):
-    lstOfMults = []
-    numStep = num - 1
-    while numStep > 0:
-        if multOfThreeOrFive(numStep):
-            lstOfMults.append(numStep)
-        numStep -= 1
-    return sum(lstOfMults)
+def sum_of_multiples_of_three_or_five(num):
+    list_of_multiples = []
+    num_step = num - 1
+    while num_step > 0:
+        if mult_of_three_or_five(num_step):
+            list_of_multiples.append(num_step)
+        num_step -= 1
+    return sum(list_of_multiples)
 
 if __name__ == "__main__":
-    answer = sumOfMultiplesOfThreeOrFive(1000)
+    answer = sum_of_multiples_of_three_or_five(1000)
     print("The sum of all the multiples of 3 or 5 below 1000 is %s" % answer)

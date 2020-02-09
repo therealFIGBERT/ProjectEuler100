@@ -30,59 +30,63 @@ STRVAL = """
 for line in STRVAL.splitlines():
     VAL.append([int(number) for number in line.split()])
 
-def largestVertical(lst):
+def largest_vertical(lst):
     largest = 0
     for i, _ in enumerate(lst):
         if i + 4 <= len(lst):
             for k, _ in enumerate(lst[i]):
-                vertSum = 1
+                vertical_sum = 1
                 for j in range(4):
-                    vertSum *= lst[i+j][k]
-                largest = vertSum if vertSum > largest else largest
+                    vertical_sum *= lst[i+j][k]
+                largest = vertical_sum if vertical_sum > largest else largest
     return largest
 
-def largestHorizontal(lst):
+def largest_horizontal(lst):
     largest = 0
     for i, _ in enumerate(lst):
         for k, _ in enumerate(lst[i]):
             if k + 4 <= len(lst[i]):
-                horizSum = 1
+                horizontal_sum = 1
                 for j in range(4):
-                    horizSum *= lst[i][k+j]
-                largest = horizSum if horizSum > largest else largest
+                    horizontal_sum *= lst[i][k+j]
+                if horizontal_sum > largest:
+                    largest = horizontal_sum
     return largest
 
-def largestDiagonal(lst):
+def largest_diagonal(lst):
     largest = 0
     for i, _ in enumerate(lst):
         for k, _ in enumerate(lst):
             if i - 3 >= 0:
                 if k - 3 <= 0:
-                    upLeft = 1
+                    up_left = 1
                     for j in range(4):
-                        upLeft *= lst[i-j][i-k]
-                    largest = upLeft if upLeft > largest else largest
+                        up_left *= lst[i-j][i-k]
+                    largest = up_left if up_left > largest else largest
                 if k + 4 <= len(lst[i]):
-                    upRight = 1
+                    up_right = 1
                     for j in range(4):
-                        upRight *= lst[i-j][k+j]
-                    largest = upRight if upRight > largest else largest
+                        up_right *= lst[i-j][k+j]
+                    largest = up_right if up_right > largest else largest
             if i + 4 <= len(lst[i]):
                 if k - 3 <= 0:
-                    downLeft = 1
+                    down_left = 1
                     for j in range(4):
-                        downLeft *= lst[i+j][k-j]
-                    largest = downLeft if downLeft > largest else largest
+                        down_left *= lst[i+j][k-j]
+                    largest = down_left if down_left > largest else largest
                 if k + 4 <= len(lst[i]):
-                    downRight = 1
+                    down_right = 1
                     for j in range(4):
-                        downRight *= lst[i+j][k+j]
-                    largest = downRight if downRight > largest else largest
+                        down_right *= lst[i+j][k+j]
+                    largest = down_right if down_right > largest else largest
     return largest
 
 if __name__ == "__main__":
-    diagonal = largestDiagonal(VAL)
-    horizontal = largestHorizontal(VAL)
-    vertical = largestVertical(VAL)
+    diagonal = largest_diagonal(VAL)
+    horizontal = largest_horizontal(VAL)
+    vertical = largest_vertical(VAL)
     answer = max([diagonal, horizontal, vertical])
-    print(f"The greatest product of four adjacent numbers in the same direction in the 20×20 grid is {answer}")
+    print((
+        "The greatest product of four adjacent numbers in the same "
+        f"direction in the 20×20 grid is {answer}"
+    ))

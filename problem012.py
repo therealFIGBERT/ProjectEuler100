@@ -6,19 +6,26 @@
 from functools import reduce
 from math import sqrt
 
-def moreThanFiveHundredFactors(num):
-    factors = len(list(reduce(list.__add__, ([i, num//i] for i in range(1, int(sqrt(num)) + 1) if num % i == 0))))
+def more_than_five_hundred_factors(num):
+    factors = len(list(reduce(
+        list.__add__, (
+            [i, num//i] for i in range(1, int(sqrt(num)) + 1) if num % i == 0
+        )
+    )))
     return num if factors > 500 else False
 
 def triangle(pos):
     val = 0
     for i in range(1, pos + 1):
         val += i
-    return moreThanFiveHundredFactors(val)
+    return more_than_five_hundred_factors(val)
 
 if __name__ == "__main__":
     answer = 2
     while not triangle(answer):
         answer += 1
     answer = triangle(answer)
-    print(f"The value of the first triangle number to have over five hundred divisors is {answer}")
+    print((
+        "The value of the first triangle number to have over "
+        f"five hundred divisors is {answer}"
+    ))

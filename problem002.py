@@ -4,23 +4,24 @@
 # language = "Python"
 # dateCompleted = "20/01/2020"
 
-def fib(limit):
-    lst = [1,2]
-    while lst[-1] <= limit:
-        lst.append(lst[-2] + lst[-1])
-    return lst
+def fibonacci(limit):
+    list_ = [1,2]
+    while list_[-1] <= limit:
+        list_.append(list_[-2] + list_[-1])
+    return list_
 
-def sumOfEvensInList(srcList):
-    lst = []
-    for i in srcList:
+def sum_of_evens_in_list(src_list):
+    list_ = []
+    for i in src_list:
         if i % 2 == 0:
-            lst.append(i)
-    return sum(lst)
+            list_.append(i)
+    return sum(list_)
 
 if __name__ == "__main__":
-    fibUntil4Mil = fib(4000000)
-    answer = sumOfEvensInList(fibUntil4Mil)
+    fibonacci_until_4_mil = fibonacci(4000000)
+    answer = sum_of_evens_in_list(fibonacci_until_4_mil)
     print((
-        "By considering the terms in the Fibonacci sequence whose values do not "
-        "exceed four million, the sum of the even-valued terms is {}".format(answer)
+        "By considering the terms in the Fibonacci sequence whose values do "
+        "not exceed four million, the sum of the even-valued terms is "
+        "{}".format(answer)
     ))

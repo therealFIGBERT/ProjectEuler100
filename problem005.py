@@ -12,4 +12,7 @@ if __name__ == "__main__":
                 if (answer * k) % i == 0:
                     answer *= k
                     break
-    print("The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is %s" % answer)
+    print((
+        "The smallest positive number that is evenly divisible by all "
+        "of the numbers from 1 to 20 is %s" % answer
+    ))

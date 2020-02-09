@@ -12,7 +12,6 @@ def collatz(num):
         else:
             num = (3*num) + 1
         sequence += 1
-    
     return sequence
 
 if __name__ == "__main__":
@@ -23,4 +22,7 @@ if __name__ == "__main__":
             answer[1] = potential[0]
             answer[2] = potential[1]
         answer[0] = answer[0] - 1
-    print(f"The starting number, under one million, that produces the longest chain from the given iterative sequence is {answer[1]}")
+    print((
+        "The starting number, under one million, that produces the "
+        f"longest chain from the given iterative sequence is {answer[1]}"
+    ))

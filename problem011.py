@@ -35,10 +35,10 @@ def largest_vertical(lst):
     for i, _ in enumerate(lst):
         if i + 4 <= len(lst):
             for k, _ in enumerate(lst[i]):
-                vertical_sum = 1
+                vertical_mult = 1
                 for j in range(4):
-                    vertical_sum *= lst[i+j][k]
-                largest = vertical_sum if vertical_sum > largest else largest
+                    vertical_mult *= lst[i+j][k]
+                largest = vertical_mult if vertical_mult > largest else largest
     return largest
 
 def largest_horizontal(lst):
@@ -46,11 +46,11 @@ def largest_horizontal(lst):
     for i, _ in enumerate(lst):
         for k, _ in enumerate(lst[i]):
             if k + 4 <= len(lst[i]):
-                horizontal_sum = 1
+                horizontal_mult = 1
                 for j in range(4):
-                    horizontal_sum *= lst[i][k+j]
-                if horizontal_sum > largest:
-                    largest = horizontal_sum
+                    horizontal_mult *= lst[i][k+j]
+                if horizontal_mult > largest:
+                    largest = horizontal_mult
     return largest
 
 def largest_diagonal(lst):
